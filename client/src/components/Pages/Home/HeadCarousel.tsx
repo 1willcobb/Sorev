@@ -46,19 +46,19 @@ const HeadCarousel = () => {
     {
       image: image1,
       title: "WE DEVELOP COURSES FOR CREATORS",
-      link: "/",
+      link: "/products",
       cta: "Click Me",
     },
     {
       image: image2,
       title: "MULTIPLY & GROW YOUR BUISNESS",
-      link: "/",
+      link: "/why",
       cta: "Click Me",
     },
     {
       image: image3,
       title: "WE IMPLEMENT THE BEST MARKETING FOR CREATORS",
-      link: "/",
+      link: "/faq",
       cta: "Click Me",
     },
     {

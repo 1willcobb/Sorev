@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: var(--global-background);
   font-family: 'League Spartan', sans-serif;
+  color: white;
 }
 
 :root{

@@ -16,7 +16,7 @@ const StyledHeader = styled.header<HeaderProps>`
   padding: 2rem;
   height: 3rem;
   background-color: #404040;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
   position: ${(props) => (props.sticky ? "sticky" : "static")};
   top: 0;
   z-index: 1;

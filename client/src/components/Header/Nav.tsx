@@ -4,27 +4,28 @@ import styled from "styled-components";
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: var(--text-color);
-  transition: color 0.2s ease;
   h3 {
     white-space: nowrap;
   }
 `;
 
 const StyledNavLinkGreen = styled(StyledNavLink)`
-  &:hover {
+  :hover {
+    transition: color 0.2s ease;
     color: var(--global-green);
   }
 `;
 
 const StyledNavLinkPurple = styled(StyledNavLink)`
-  &:hover {
+  :hover {
+    transition: color 0.2s ease;
     color: var(--global-purple);
   }
 `;
 
 const StyledNavLinkRed = styled(StyledNavLink)`
-  
-  &:hover {
+  :hover {
+    transition: color 0.2s ease;
     color: var(--global-red);
   }
 `;

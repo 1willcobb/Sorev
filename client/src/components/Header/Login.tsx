@@ -5,8 +5,8 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
-  transition: color 0.2s ease;
-  &:hover {
+  :hover {
+    transition: color 0.2s ease;
     color: var(--global-yellow);
   }
 `;

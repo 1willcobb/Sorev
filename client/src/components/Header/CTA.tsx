@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-const StyledCTAButton = styled(NavLink)`
+interface StyledCTAButtonProps {
+  to: string;
+  children: React.ReactNode;
+}
+
+export const StyledCTAButton = styled(NavLink)<StyledCTAButtonProps>`
   padding: 1rem;
   border-radius: 171px;
   text-decoration: none;
@@ -22,8 +27,8 @@ const StyledCTAButton = styled(NavLink)`
   }
 
   h3 {
-    
-    color: var(--text-color);
+    background: none;
+    color: var(--global-background);
   }
 `;
 

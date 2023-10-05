@@ -22,24 +22,26 @@ function VideoPlayer() {
     setVideoUrl(root + videoKey);
   };
 
-
   return (
     <div>
       {videos.map((video) => (
         <>
-          <button key={video} onClick={()=>handleVideoSelect(video)}>{video}</button>
+          <button key={video} onClick={() => handleVideoSelect(video)}>
+            {video}
+          </button>
         </>
       ))}
-      {videoUrl && 
-      <ReactPlayer
-        height={"500px"}
-        width={"500px"}
-        url={videoUrl}
-        controls={false}
-        playing={true}
-        loop={true}
-        muted
-      /> }
+      {videoUrl && (
+        <ReactPlayer
+          height={"500px"}
+          width={"500px"}
+          url={videoUrl}
+          controls={false}
+          playing={true}
+          loop={true}
+          muted
+        />
+      )}
     </div>
   );
 }

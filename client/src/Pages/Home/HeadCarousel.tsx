@@ -1,11 +1,11 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import styled from "styled-components";
-import image1 from "/src/images/sorev-1.webp";
-import image2 from "/src/images/sorev-2.webp";
-import image3 from "/src/images/sorev-3.webp";
-import image4 from "/src/images/sorev-4.webp";
+import image1 from "/src/Images/sorev-1.webp";
+import image2 from "/src/Images/sorev-2.webp";
+import image3 from "/src/Images/sorev-3.webp";
+import image4 from "/src/Images/sorev-4.webp";
 import "@splidejs/react-splide/css";
-import { StyledCTAButton } from "../../Header/CTA";
+import { StyledCTAButton } from "/src/Components/Header/CTA.tsx";
 
 const StyledSliders = styled.div`
   position: relative;

@@ -53,7 +53,6 @@ const Header = () => {
         <Logo />
         <Nav />
       </StyledDiv>
-
       <StyledDiv>
         <Login />
         <CallToAction />

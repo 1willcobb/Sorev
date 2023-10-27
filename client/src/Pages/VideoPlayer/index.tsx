@@ -2,9 +2,11 @@ import VideoViewer from "./VideoViewer";
 import SideBarControls from "./SideBarControls";
 
 const VideoPlayer = () => {
+
+
   return (
     <>
-      <SideBarControls />
+      <SideBarControls  />
       <VideoViewer />
     </>
   );

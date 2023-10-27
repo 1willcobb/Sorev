@@ -1,20 +1,17 @@
-import Header from "./components/Header";
+import Header from "./Components/Header";
+import Navbar from "./Components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import {
-  Home,
-  Products,
-  Faq,
-  Why,
-  Portal,
-  Login,
-  VideoPlayer,
-} from "./components/Pages";
+import { Home, Products, Faq, Why, Portal, Login, VideoPlayer } from "./Pages";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 function App() {
   return (
     <>
-      <Header />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

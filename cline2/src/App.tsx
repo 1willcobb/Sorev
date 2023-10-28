@@ -1,17 +1,18 @@
-import Header from "./Components/Header";
-import Navbar from "./Components/NavBar";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import { Home, Products, Faq, Why, Portal, Login, VideoPlayer } from "./Pages";
+import { Home, Products, Faq, Why, Portal, Login, VideoPlayer } from "./pages";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
+import ResponsiveAppBar from "./components/Header";
+import WordAnimation from "./components/test";
+
 function App() {
   return (
     <>
-      <Navbar/>
+      <ResponsiveAppBar />
+      <WordAnimation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

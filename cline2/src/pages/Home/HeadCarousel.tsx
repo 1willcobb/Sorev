@@ -1,11 +1,10 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import image1 from "/src/Images/sorev-1.webp";
 import image2 from "/src/Images/sorev-2.webp";
 import image3 from "/src/Images/sorev-3.webp";
 import image4 from "/src/Images/sorev-4.webp";
 import "@splidejs/react-splide/css";
-import { StyledCTAButton } from "/src/Components/Header/CTA.tsx";
 
 const StyledSliders = styled.div`
   position: relative;
@@ -31,7 +30,7 @@ const HeadCarousel = () => {
   const slideOptions = {
     rewind: false,
     autoplay: true,
-    interval: 3000, // speed of slides
+    interval: 5000, // speed of slides
     type: "loop",
     speed: 1000, // speed of transition
     gap: "1rem",
@@ -78,9 +77,6 @@ const HeadCarousel = () => {
             <div>
               <div>
                 <h1>{slide.title}</h1>
-                <StyledCTAButton to={slide.link}>
-                  <h3>{slide.cta}</h3>
-                </StyledCTAButton>
               </div>
             </div>
           </StyledSliders>

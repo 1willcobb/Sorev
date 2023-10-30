@@ -18,6 +18,9 @@ const pages = [
   { name: "Products", link: "/products" },
   { name: "FAQ", link: "/faq" },
   { name: "Why", link: "/why" },
+  { name: "Video", link: "/video" },
+  { name: "Portal", link: "/portal" },
+  { name: "Login", link: "/login" },
 ];
 const settings = [
   { name: "Profile", link: "/profile" },

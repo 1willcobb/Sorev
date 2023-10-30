@@ -1,13 +1,10 @@
 import VideoViewer from "./VideoViewer";
-import SideBarControls from "./SideBarControls";
+import ResponsiveDrawer from "./SideBarControls";
 
 const VideoPlayer = () => {
-
-
   return (
     <>
-      <SideBarControls  />
-      <VideoViewer />
+      <ResponsiveDrawer />
     </>
   );
 };

@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <ResponsiveAppBar />
-      <WordAnimation />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

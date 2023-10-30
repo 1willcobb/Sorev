@@ -10,7 +10,7 @@ const theme = createTheme({
   spacing: 4,
   palette: {
     background: {
-      default: "#404040", // Replace with your desired background color
+      default: "#343434", // Replace with your desired background color
       paper: "#ffffff", // Customize the background for paper-like components
     },
   },

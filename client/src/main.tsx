@@ -6,12 +6,16 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./index.css";
 import { CssBaseline } from "@mui/material";
 
+
 const theme = createTheme({
   spacing: 4,
   palette: {
+    primary: { main: "#87D2A7" },
+    secondary: { main: "#EEA186" },
+    error: { main: "#C1A2EA" },
+    warning: { main: "#F7D976" },
     background: {
-      default: "#343434", // Replace with your desired background color
-      paper: "#ffffff", // Customize the background for paper-like components
+      default: "#343434"
     },
   },
 });

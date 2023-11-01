@@ -110,6 +110,7 @@ function ResponsiveAppBar() {
               component="img"
               sx={{ height: "50px", display: { xs: "flex", md: "none" } }}
               src={Sorev_Carrd}
+              alt="Sorev Logo"
             />
           </Link>
 

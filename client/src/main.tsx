@@ -10,6 +10,7 @@ import { CssBaseline } from "@mui/material";
 const theme = createTheme({
   spacing: 4,
   palette: {
+    text: { primary: "#FFFFFF" },
     primary: { main: "#87D2A7" },
     secondary: { main: "#EEA186" },
     error: { main: "#C1A2EA" },

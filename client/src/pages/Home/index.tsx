@@ -8,9 +8,7 @@ const Home = () => {
   return (
     <>
       <HeadCarousel />
-      <div>
-        <WhatWeDo />
-      </div>
+      <WhatWeDo />
       <Inspo />
       <Creators />
       <ContactUs />

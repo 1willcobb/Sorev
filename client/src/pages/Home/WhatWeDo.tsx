@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { styled, Container, Box } from "@mui/material";
+import zIndex from "@mui/material/styles/zIndex";
 
 const green = "#87D2A7";
 const red = "#EEA186";
@@ -34,26 +35,38 @@ const StyledBlockRight = styled(StyledBlock)`
 
 const WhatWeDo = () => {
   const whatWeDoRef = useRef<HTMLDivElement | null>(null);
+  const [zIndex, setZIndex] = useState<number[]>([10, 9, 8, 7]);
   const [hoveredBlock, setHoveredBlock] = useState<number | null>(null);
   const [lastHoveredBlock, setLastHoveredBlock] = useState<number | null>(null);
 
-  const handleMouseOver = (blockNumber: number) => {
-    setLastHoveredBlock(hoveredBlock);
-    setHoveredBlock(blockNumber);
+  // Function to handle mouse over
+  const handleMouseOver = (hoverdBlock: number) => {
+    setHoveredBlock(hoverdBlock); // Set hoveredBlock state to hovered block
+    setZIndex([...zIndex, (zIndex[hoverdBlock - 1] = 11)]); // Set zIndex when mouse is over
   };
 
+  // Function to handle mouse out
   const handleMouseOut = () => {
-    setHoveredBlock(null);
+    // Reset zIndex after 300 milliseconds
+    setHoveredBlock(null); // Reset hoveredBlock state to null
+    setTimeout(() => {
+      setZIndex([...zIndex]); // Set zIndex back to its original state
+    }, 300);
   };
 
   return (
     <div
-      style={{ display: "flex", width: "100%", position: "relative" }}
+      style={{
+        display: "flex",
+        width: "100%",
+        position: "relative",
+        height: "1350px",
+      }}
       ref={whatWeDoRef}
     >
       <StyledBlock
         style={{
-          zIndex: hoveredBlock === 1 ? 11 : lastHoveredBlock === 1 ? 11 : 10,
+          zIndex: zIndex[0],
           background: green,
           transform: hoveredBlock === 1 ? "translateY(100px)" : "translateY(0)",
         }}
@@ -61,13 +74,12 @@ const WhatWeDo = () => {
         onMouseOut={handleMouseOut}
       >
         <Container sx={{ display: "flex", justifyContent: "space-evenly" }}>
-          <Box sx={{ fontSize: "2em", fontWeight: "bold" }}>What We Do</Box>
-          <Box sx={{ fontSize: "2em", fontWeight: "bold" }}>What We Do</Box>
+          <Box sx={{ fontSize: "2em", fontWeight: "bold" }}>DESIGN</Box>
         </Container>
       </StyledBlock>
       <StyledBlockRight
         style={{
-          zIndex: hoveredBlock === 2 ? 11 : lastHoveredBlock === 2 ? 11 : 9,
+          zIndex: zIndex[1],
           top: "300px",
           background: red,
           transform: hoveredBlock === 2 ? "translateY(100px)" : "translateY(0)",
@@ -75,11 +87,11 @@ const WhatWeDo = () => {
         onMouseOver={() => handleMouseOver(2)}
         onMouseOut={handleMouseOut}
       >
-        2
+        <Box sx={{ fontSize: "2em", fontWeight: "bold" }}>PRODUCE</Box>
       </StyledBlockRight>
       <StyledBlock
         style={{
-          zIndex: hoveredBlock === 3 ? 11 : lastHoveredBlock === 3 ? 11 : 8,
+          zIndex: zIndex[2],
           top: "600px",
           background: purple,
           transform: hoveredBlock === 3 ? "translateY(100px)" : "translateY(0)",
@@ -87,19 +99,19 @@ const WhatWeDo = () => {
         onMouseOver={() => handleMouseOver(3)}
         onMouseOut={handleMouseOut}
       >
-        3
+        <Box sx={{ fontSize: "2em", fontWeight: "bold" }}>MARKET</Box>
       </StyledBlock>
       <StyledBlockRight
         style={{
-          zIndex: hoveredBlock === 4 ? 11 : lastHoveredBlock === 4 ? 11 : 7,
+          zIndex: zIndex[3],
           top: "900px",
           background: yellow,
-          transform: hoveredBlock === 4 ? "translateY(00px)" : "translateY(0)",
+          transform: hoveredBlock === 4 ? "translateY(100px)" : "translateY(0)",
         }}
         onMouseOver={() => handleMouseOver(4)}
         onMouseOut={handleMouseOut}
       >
-        4
+        <Box sx={{ fontSize: "2em", fontWeight: "bold" }}>MANAGE</Box>
       </StyledBlockRight>
     </div>
   );

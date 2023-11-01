@@ -6,7 +6,6 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import ResponsiveAppBar from "./components/Header";
-import WordAnimation from "./components/test";
 
 function App() {
   return (

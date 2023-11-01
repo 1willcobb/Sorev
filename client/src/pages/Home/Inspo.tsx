@@ -1,8 +1,9 @@
+import WordAnimation from "../../components/test";
 
 const Inspo = () => {
   return (
     <div>
-      Inspo
+      <WordAnimation/>
     </div>
   )
 }

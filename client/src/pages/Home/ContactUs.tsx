@@ -1,5 +1,19 @@
 import React, { useState } from "react";
-import { Box, Button, Container, Grid, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
+import styled from "@emotion/styled";
+
+const ContactContainer = styled(Container)`
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+`;
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -23,14 +37,14 @@ function ContactUs() {
     console.log(formData);
   };
 
-
   return (
-    <Container maxWidth="sm">
+    <ContactContainer maxWidth="sm">
       <Box mt={4}>
         <Typography variant="h4" align="center">
           LET'S BUILD A COURSE
         </Typography>
       </Box>
+      <br/>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -80,13 +94,13 @@ function ContactUs() {
             />
           </Grid>
         </Grid>
-        <Box mt={2}>
+        <Box mt={2} sx={{display: "flex", justifyContent: "center"}}>
           <Button type="submit" variant="contained" color="primary">
-            Submit
+            CONTACT US
           </Button>
         </Box>
       </form>
-    </Container>
+    </ContactContainer>
   );
 }
 

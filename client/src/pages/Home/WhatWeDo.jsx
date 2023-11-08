@@ -34,13 +34,13 @@ const StyledBlockRight = styled(StyledBlock)`
 `;
 
 const WhatWeDo = () => {
-  const whatWeDoRef = useRef<HTMLDivElement | null>(null);
-  const [zIndex, setZIndex] = useState<number[]>([10, 9, 8, 7]);
-  const [hoveredBlock, setHoveredBlock] = useState<number | null>(null);
-  const [lastHoveredBlock, setLastHoveredBlock] = useState<number | null>(null);
+  const whatWeDoRef = useRef(null);
+  const [zIndex, setZIndex] = useState([10, 9, 8, 7]);
+  const [hoveredBlock, setHoveredBlock] = useState(null);
+  const [lastHoveredBlock, setLastHoveredBlock] = useState(null);
 
   // Function to handle mouse over
-  const handleMouseOver = (hoverdBlock: number) => {
+  const handleMouseOver = (hoverdBlock) => {
     setHoveredBlock(hoverdBlock); // Set hoveredBlock state to hovered block
     setZIndex([...zIndex, (zIndex[hoverdBlock - 1] = 11)]); // Set zIndex when mouse is over
   };

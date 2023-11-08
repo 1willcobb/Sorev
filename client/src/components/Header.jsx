@@ -29,17 +29,17 @@ const settings = [
 ];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+  const [anchorElNav, setAnchorElNav] = React.useState(
     null
   );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+  const [anchorElUser, setAnchorElUser] = React.useState(
     null
   );
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -98,7 +98,10 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link to={page.link} style={{ textDecoration: "none", color: "black" }}>
+                  <Link
+                    to={page.link}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <Typography textAlign="center">{page.name}</Typography>
                   </Link>
                 </MenuItem>

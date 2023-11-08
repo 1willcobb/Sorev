@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import ReactDOM from "react-dom";
+import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./index.css";
 import { CssBaseline } from "@mui/material";
-
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 const theme = createTheme({
   spacing: 4,
@@ -16,18 +16,28 @@ const theme = createTheme({
     error: { main: "#C1A2EA" },
     warning: { main: "#F7D976" },
     background: {
-      default: "#343434"
+      default: "#343434",
     },
   },
 });
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const client = new ApolloClient({
+  uri: "/graphql",
+  cache: new InMemoryCache(),
+  headers: {
+    authorization: `Bearer ${localStorage.getItem("id_token")}`,
+  },
+});
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <CssBaseline />
-        <App />
-      </BrowserRouter>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <CssBaseline />
+          <App />
+        </BrowserRouter>
+      </ApolloProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

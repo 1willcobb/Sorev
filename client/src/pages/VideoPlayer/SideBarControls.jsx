@@ -33,7 +33,7 @@ export default function ResponsiveDrawer() {
     "pt4.mp4",
   ];
 
-  const handleVideoSelect = (videoKey: string) => {
+  const handleVideoSelect = (videoKey) => {
     setVideoUrl(videoKey);
   };
 

@@ -1,10 +1,6 @@
 import ReactPlayer from "react-player";
 
-interface Props {
-  videoUrl: string;
-}
-
-function VideoViewer({ videoUrl }: Props) {
+function VideoViewer({ videoUrl }) {
   const root = "https://d2amnd3jkfva2l.cloudfront.net/";
 
   return (

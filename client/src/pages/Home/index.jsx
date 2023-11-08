@@ -18,8 +18,8 @@ const Home = () => {
   return (
     <CenterdContent >
       <HeadCarousel />
-      <WhatWeDo />
       <Inspo />
+      <WhatWeDo />
       <Creators />
       <ContactUs />
     </CenterdContent>

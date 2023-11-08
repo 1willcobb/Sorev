@@ -23,7 +23,7 @@ function ContactUs() {
     info: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -31,7 +31,7 @@ function ContactUs() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // You can handle form submission here, e.g., sending data to a server or performing client-side validation.
     console.log(formData);

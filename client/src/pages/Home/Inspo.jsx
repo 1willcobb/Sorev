@@ -52,10 +52,14 @@ const WordAnimation = () => {
         justifyContent: "center",
         alignItems: "center",
         color: "white",
+        margin: "30px",
       }}
     >
       <div style={{ display: "flex" }}>
-        <Typography variant="h4" style={{ fontWeight: "bold", whiteSpace: "nowrap" }}>
+        <Typography
+          variant="h4"
+          style={{ fontWeight: "bold", whiteSpace: "nowrap" }}
+        >
           {text1}
         </Typography>
         <StyledText>
@@ -63,7 +67,9 @@ const WordAnimation = () => {
             {words.map((word, index) => {
               return (
                 <>
-                  <span key={index} style={{color: colors[index] }} >{word}</span>
+                  <span key={index} style={{ color: colors[index] }}>
+                    {word}
+                  </span>
                   <br />
                 </>
               );

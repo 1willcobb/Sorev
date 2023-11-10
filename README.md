@@ -1,7 +1,14 @@
 # SOREV
 
-Sorev web development and web app using REACT
+Sorev web development and web app using REACT and a MERN Stack. 
 
-Working on new features in the back end video player
+## Technologies
 
-Considering docker containers 
+* React
+* MongoDB
+* NodeJS
+* Express
+* Apollo
+* GraphQL
+* Material UI
+

@@ -1,4 +1,4 @@
-import decode from 'jwt-decode';
+import {jwtDecode as decode}  from 'jwt-decode';
 
 class AuthService {
   getProfile() {
@@ -38,4 +38,5 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+const auth = new AuthService();
+export default auth;

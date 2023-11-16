@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import Sorev_Carrd from "../images/Sorev_Carrd.svg";
+import { CssBaseline } from "@mui/material";
 
 const pages = [
   { name: "Products", link: "/products" },
@@ -18,9 +19,10 @@ const settings = [
 
 function ResponsiveAppBar() {
   return (
-    <>
-
-    </>
+    <div className="container flex justify-self-center">
+      <CssBaseline />
+      <img src={Sorev_Carrd} height={"200px"} className="" />
+    </div>
   );
 }
 export default ResponsiveAppBar;
